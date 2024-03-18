@@ -1,0 +1,9 @@
+[workspace]
+resolver = "2"
+members = [
+    "leaderboard-server-sdk",
+    "elastic-leaderboard-service"
+]
+
+[profile.release]
+lto = true

@@ -1,0 +1,30 @@
+{
+  "version": "1.0",
+  "projections": {
+    "leaderboard-client": {
+      "transforms": [
+        {
+          "name": "includeServices",
+          "args": {
+            "services": [
+              "kotlinconf#ElasticLeaderboardService"
+            ]
+          }
+        }
+      ],
+      "plugins": {
+        "kotlin-codegen": {
+          "service": "kotlinconf#ElasticLeaderboardService",
+          "package": {
+              "name": "kotlinconf.elasticleaderboard",
+              "version": "1.0"
+          },
+          "build": {
+              "rootProject": false,
+              "optInAnnotations": [ "aws.smithy.kotlin.runtime.InternalApi" ]
+          }
+        }
+      }
+    }
+  }
+}
